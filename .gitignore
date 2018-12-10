@@ -1,0 +1,13 @@
+# IGNORE FILES
+
+# IntelliJ project files
+.idea
+
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# MAC
+*.DS_STORE
