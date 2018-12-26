@@ -1,0 +1,61 @@
+% Base de archivo LaTeX-article con paquetes necesarios cargados
+% Jorge Eiras 2014 CC 
+
+\usepackage[english]{babel}           % Permite escribir en Castellano (tildes y ñ) e implementa los contenidos en castellano.
+\usepackage[utf8]{inputenc}           % Codificación de caracteres. WINDOWS Y LINUX.
+%\usepackage[latin1]{inputenc}        % Codificacion de caracteres. MAC
+
+%ALGUNOS PAQUETES INTERESANTES. ESTOS PAQUETES (LIBRERÍAS) YA ESTÁN EN NUESTRO EQUIPO. DESDE AQUÍ LOS ESTAMOS LLAMANDO.
+\usepackage[T1]{fontenc} % Permite cambiar la fuente por defecto.
+\usepackage{graphicx}    % Permite implementar imágenes.
+\usepackage{color}       % Permite el uso de colores.
+\usepackage{anysize}     % Permite modificar el tamaño de los márgenes.
+\usepackage{multicol}    % Permite escribir a doble, triple...columna.
+\usepackage{bm}          % Permite letras griegas en negrita (uso: \bm{\alpha}).
+\usepackage{textcomp}    % Incluye símbolos específicos, pueden consultarse en la red.
+\usepackage{eurosym}     % Permite escribir el símbolo € mediante la orden \euro.
+\usepackage{amsthm}      % Paquete de la AMS para escribir teoremas.
+\usepackage{amsmath,amsfonts} %Paquetes específicos de símbolos creados por la sociedad americana de matemáticas.
+\usepackage{lineno}      % Permite numerar las líneas. Muy útil para borradores de trabajo en equipo.
+
+%ORDENES PARA PERSONALIZAR EL FORMATO DE TU DOCUMENTO
+\marginsize{1.5cm}{1cm}{1.5cm}{1.5cm} % MÁRGENES: Izq, Der, Sup, Inf.
+\parindent=0mm                        % Sangría por defecto. 
+\parskip=3mm                          % Espacio entre párrafos por defecto.
+\renewcommand{\baselinestretch}{1}    % Interlineado.
+
+%Commands for the title
+\newcommand{\HRuleThin}{\rule{\linewidth}{0.5mm}}
+\newcommand{\HRuleHuge}{\rule{\linewidth}{0.9mm}}
+
+% To manage the url
+\usepackage{url}
+
+% To add the hyperlink to the index
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=blue
+}
+
+% for the appendix
+\usepackage[toc,page]{appendix}
+\renewcommand\appendixtocname{Appendix}
+\renewcommand{\appendixpagename}{Appendix}
+
+%Per avere il conto delle pagine rispetto all'ultima pagina
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy} %Serve per il tipo della pagina per impostare le stile di header e footer
+\fancyfoot{} %Rimuove la numerazione di default dello stile fancy
+\fancyhead[R]{} %rimuovere la parte a destra dell'intestazione
+
+\setlength{\headheight}{0.5cm} 
+% No indentazione paragrafo
+\setlength{\parindent}{0pt}
+
+\usepackage{caption}
+\usepackage{subcaption}
