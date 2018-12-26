@@ -3,11 +3,21 @@
 # IntelliJ project files
 .idea
 
+# LaTeX Auto generated files
 *.aux
 *.log
-*.out
-*.synctex.gz
 *.toc
+*.gz*
+*.out
+*.bak
+*.lof
+*.lot
+*.bak*
+*.swp
+*.loc
+*.bbl
+*.blg
+*.xml
 
 # MAC
 *.DS_STORE
