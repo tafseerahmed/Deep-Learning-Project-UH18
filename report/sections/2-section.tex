@@ -1,0 +1,19 @@
+% section 2: structure of the pandas dataframe. Problem of the
+% missing values -> solution (data augmentation). Distribution of the data -> solution (vector of weights).
+\section{Data Management}
+To start the project the first thing to do was finding the proper way to handle the data. In this section we explain all the problems we faced and the corresponding found solution during this process.
+
+\subsection{Creation of the Dataset}
+The first problem was the \textbf{creation of the Dataset}. As the guide of PyTorch and the exercise suggested we created a custom Dataset following this \href{https://github.com/utkuozbulak/pytorch-custom-dataset-examples}{guide}. Based on this guide we organized the pandas Dataframe in the following way:
+\begin{itemize}
+	\item one column containing the path of the image;
+	\item one column for each class. If the sample (the row) belongs to one on more class, it has 1 in the corresponding column which represents the belonging class;
+	\item one column containing the representing image in the PIL format;
+	\item one column containg one list whose values are the classes which the example belongs to.
+\end{itemize}
+
+\subsection{Grayscale problem}
+
+\subsection{Missing values problem}
+
+\subsection{Imbalanced data}
