@@ -14,13 +14,13 @@ The first problem was the \textbf{creation of the Dataset}. As the guide of PyTo
 
 \subsection{Grayscale problem}
 
-We noticed that some images in the dataset are in grayscale. This is considered a problem because the \texttt{in\_channels} parameter of the convolutional layer requires a fixed number of channels to work properly. To solve this problem we decided to \textbf{convert} the greyscale images from one channel to three channels. This can be easily done using the pytorch function \texttt{convert("RGB")}, after opening the image.
+Some images are in grayscale. This is a problem because the \texttt{in\_channels} parameter of the convolutional layer requires a fixed number of channels to work properly. Due to the fact that the majoity of image are colored, we decided to \textbf{convert} the greyscale images from one channel to three channels. This can be easily done using the pytorch function \texttt{convert("RGB")}, after opening the image.
 This operation is done when an image is taken from the dataset (in \texttt{\_\_getitem\_\_} function).
 
 \subsection{Missing values problem}
 
-Some images in the dataset miss at least one label or are completely without them. If we plot these images we can easily notice that some of them can be considered uncorrectly unlabeled. In fact, there are some images, in which can be reasonable to have one (or more) of the considered classes, with some missing labels (i.e. im3 represents a river but it has no labels or im19 which represents clouds). \\
-Our first idea was to remove these images. From our point of view they could affect the results adding undesiderable noise to the data. The algorithm could have difficulties to understand the right pattern if similar images have different labels.
+Some images in the dataset miss at least one label or are completely without them. If we plot these images we can easily notice that some of them can be considered uncorrectly unlabeled. In fact, there are some images, in which can be reasonable to have one (or more) of the considered classes, with some missing labels (i.e. im13 represents a river but it has no labels or im19 which represents clouds). \\
+Our first idea was to remove these imagesin order to not add possible undesiderable noise to the data. However we discovered that in this way, the network have not enought images about "no label". In this way, images with real no label where bad interpreatate by the network.
 The problem was the precision. In fact, some images does not contain any class and have an empty prediction is the maximum we can achieve. So, if we eliminate all the images without label the model will learn also to make always a prediction (which makes the model less precise).
 Since labeling all the images which suppose to have a class was to expensive, we decided to train the models on the whole training set. \\
 The division between training and test set is respectively 90\% of the data for the training and 10\% for the test.
