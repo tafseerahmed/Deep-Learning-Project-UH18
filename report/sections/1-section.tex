@@ -5,3 +5,5 @@ To do the project we used \textbf{Google colab}, the Google's free cloud service
 The whole project is conained in the file \texttt{image\_project.ipynb}. To see the fully results you need only to run the file.
 
 \subsection{Precision vs Recall}
+
+We need to decide to emphasize the precision or the recall. In the project we are dealing with multi-label predictions, so we need to predict one or more classes for each sample. We think that \textbf{precision} is more important in this case. In fact, having a good recall means that the prediction could be correct for one class, but also other classes can be considered as belonging for one sample. This is not interesting. What we want is to be sure that one class appears in that image. To achieve this goal we first calculated the threshold for each class (as written in section 2.2). Then for each model we changed a bit the threshold to make the predictions more accurate (augmenting the precision).
