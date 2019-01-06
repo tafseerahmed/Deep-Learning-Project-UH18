@@ -49,6 +49,10 @@ Resnet50 (Pretrained) |    .697895 |
 Resnet152             |    .724525 |    94.81         
 
 ### Graphs
+> Resnet50 (Pretrained)
+
+> ![image](https://user-images.githubusercontent.com/12884292/50740796-afc70f80-11fc-11e9-86d5-dbdbe44214fa.png)
+
 > Resnet18
 
 > ![image](https://user-images.githubusercontent.com/12884292/50740672-81e0cb80-11fa-11e9-94d9-b8bee54339d1.png)
