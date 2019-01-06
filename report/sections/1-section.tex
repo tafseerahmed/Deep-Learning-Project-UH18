@@ -2,8 +2,21 @@
 \section{About the project}
 
 To do the project we used \textbf{Google colab}, the Google's free cloud service for AI developers. The reasons that convince us to use this tool are the possibility to deploy both python and jupyter notebook file and the availability of the GPU. \\
-The whole project is conained in the file \texttt{image\_project.ipynb}. To see the fully results you need only to run the file.
+In the zip file you can find three different directories:
+\begin{enumerate}
+	\item \textbf{fast-ai}: which contains the results obtained with fast-ai tools;
+	\item \textbf{pyorch}: which contains all the other trials we performed and the final chosen algorithm.
+	%\item \textbf{models}: which contains two different files (\texttt{dlcompetition\_resnet18\_full} and).
+\end{enumerate}
 
-\subsection{Precision vs Recall}
+Notice that two algorithms are provided for the final solution. Further explanation about that can be found in the last section (section 4).
 
-We need to decide to emphasize the precision or the recall. In the project we are dealing with multi-label predictions, so we need to predict one or more classes for each sample. We think that \textbf{precision} is more important in this case. In fact, having a good recall means that the prediction could be correct for one class, but also other classes can be considered as belonging for one sample. This is not interesting. What we want is to be sure that one class appears in that image. To achieve this goal we first calculated the threshold for each class (as written in section 2.2). Then for each model we changed a bit the threshold to make the predictions more accurate (augmenting the precision).
+You can find the pth and ptk files in the \href{https://github.com/tafseerahmed/Deep-Learning-Project-UH18}{GitHub repository} in the \textit{models} directory. 
+
+%To load the models you can use the following code:
+%\texttt{model = torch.load('dlcompetition\_resnet18\_full.pth')}
+%\texttt{model.load\_state\_dict(torch.load("pretrained\_resnet\_50\_20.pkl"))}
+
+%\subsection{Precision vs Recall}
+
+%We need to decide to emphasize the precision or the recall. In the project we are dealing with multi-label predictions, so we need to predict one or more classes for each sample. We think that \textbf{precision} is more important in this case. In fact, having a good recall means that the prediction could be correct for one class, but also other classes can be considered as belonging for one sample. This is not interesting. What we want is to be sure that one class appears in that image. To achieve this goal we first calculated the threshold for each class (as written in section 2.2). Then for each model, we changed a bit the threshold to make the predictions more accurate (augmenting the precision).
