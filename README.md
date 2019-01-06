@@ -68,7 +68,7 @@ Since Azure's Custom Vision provides a prediction URL, it would be used in our F
 
 ### Future Work
  - Deploy Web-based GUI for Custom Vision trained model (API's are live)
- - Add Code Comments
+ - Comment and Clean Code
 
 ## Creators
 1. [Stefano Lia](https://github.com/StefanoLia)
